@@ -500,6 +500,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   min-height: 217px;
+  padding: 27px 70px;
   background: #5f666c url("../img/content-img/filter_background.jpg") 0% 45%;
 }
 
@@ -512,12 +513,12 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 400px;
 }
 
 .filter-title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -525,10 +526,14 @@ body {
   text-transform: uppercase;
 }
 
+.filter-facilities {
+  margin-right: 118px;
+}
+
 .facilities-list {
   list-style: none;
   margin: 0;
-  margin-left: 10px;
+  margin-left: 36px;
   padding: 0;
 }
 
@@ -540,16 +545,53 @@ body {
   text-transform: uppercase;
 }
 
+.facilities-item:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
 .facilities-checkbox {
   position: relative;
 }
 
-.checkbox-indicator::before {
+.accomodation-list {
+  list-style: none;
+  margin: 0;
+  margin-left: 38px;
+  padding: 0;
+}
+
+.accomodation-item {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.accomodation-item:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+
+.accomodation-checkbox {
+  position: relative;
+}
+
+input[type="checkbox"] + .checkbox-indicator::before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -2px;
+  left: -38px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/svg/checkbox-off.svg");
+  background: url("../img/svg/checkbox-off.svg") no-repeat 0 0;
+}
+
+input[type="checkbox"]:checked + .checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -38px;
+  width: 27px;
+  height: 23px;
+  background: url("../img/svg/checkbox-on.svg") no-repeat 0 0;
 }
