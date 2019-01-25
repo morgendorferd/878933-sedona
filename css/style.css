@@ -43,7 +43,7 @@ body {
 
 .header-nav-link {
   box-sizing: border-box;
-  padding: 14px;
+  margin: 0px 47px;
   color: #000000;
   font-size: 14px;
   font-weight: 700;
@@ -56,15 +56,25 @@ body {
 .nav-menu-left {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   width: 478px;
+  padding: 14px 20px;
+}
+
+.nav-menu-left a:nth-child(2n) {
+  margin-left: 101px;
 }
 
 .nav-menu-right {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 478px;
+  padding: 14px 20px;
+}
+
+.nav-menu-right a:nth-child(2n+1) {
+  margin-right: 118px;
 }
 
 .header-logo {
@@ -249,19 +259,171 @@ body {
 .booking p {
   margin: 0 auto;
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   color: #333333;
   font-size: 14px;
   font-weight: 400;
+  line-height: 26px;
   text-transform: uppercase;
   text-align: center;
 }
 
 .hotel-search-btn {
-  padding: 30px 135px;
+  width: 568px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #766357;
   color: #ffffff;
   font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.modal {
+  z-index: 10;
+}
+
+.modal-booking {
+  box-sizing: border-box;
+  width: 568px;
+  min-height: 395px;
+  margin-bottom: 77px;
+  padding: 55px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.booking-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.booking-form label {
+  margin-top: 9px;
+  margin-bottom: 34px;
+}
+
+.input-check {
+  position: relative;
+  box-sizing: border-box;
+  width: 346px;
+  height: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.input-check::after {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 22px;
+  top: 8px;
+  right: -15px;
+  background: url("../img/svg/calendar.svg") no-repeat 0 0;
+}
+
+.input-number {
+  box-sizing: border-box;
+  width: 38px;
+  height: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.guest-amount-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.adults-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.children-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.label-adults {
+  margin-right: 41px;
+}
+
+.label-children {
+  margin-right: 28px;
+}
+
+.number-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #a9a9a9;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.input-number {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.booking-submit-btn {
+  width: 458px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+::-webkit-input-placeholder {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+::-moz-placeholder {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+:-ms-input-placeholder {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+:-moz-placeholder {
+  color: #000000;
+  font-size: 14px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
@@ -329,4 +491,65 @@ body {
   font-weight: 400;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 217px;
+  background: #5f666c url("../img/content-img/filter_background.jpg") 0% 45%;
+}
+
+.filter fieldset {
+  padding: 0;
+  border: none;
+}
+
+.filter-checkbox {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.filter-title {
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.facilities-list {
+  list-style: none;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.facilities-item {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.facilities-checkbox {
+  position: relative;
+}
+
+.checkbox-indicator::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/svg/checkbox-off.svg");
 }

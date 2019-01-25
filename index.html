@@ -117,10 +117,30 @@
             Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
           <button type="button" name="hotel-search" class="hotel-search-btn">ПОИСК ГОСТИНИЦЫ В седоне</button>
+          <div class="modal modal-booking modal-show">
+            <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="check-in">Дата заезда:</label>
+              <input type="text" name="check-in" value="" placeholder="24 апреля 2017" class="input-check">
+              <label for="check-out">Дата выезда:</label>
+              <input type="text" name="check-out" value="" placeholder="4 июля 2017" class="input-check">
+              <div class="guest-amount-wrapper">
+                <div class="adults-wrapper">
+                  <label for="adults" class="label-adults">Взрослые:</label>
+                  <button class="number-btn" type="button" name="down-btn">-</button>
+                  <input type="text" name="adults" value="2" class="input-number">
+                  <button class="number-btn" type="button" name="up-btn">+</button>
+                </div>
+                <div class="children-wrapper">
+                  <label for="children" class="label-children">Дети:</label>
+                  <button class="number-btn" type="button" name="down-btn">-</button>
+                  <input type="text" name="children" value="0" class="input-number">
+                  <button class="number-btn" type="button" name="up-btn">+</button>
+                </div>
+              </div>
+              <button class="booking-submit-btn" type="submit">Найти</button>
+            </form>
+          </div>
         </section>
-        <div class="map">
-          <img src="img/content-img/map.jpg" width="1200" height="594" alt="Карта">
-        </div>
       </div>
     </main>
     <footer class="main-footer">
@@ -149,22 +169,5 @@
         </div>
       </div>
     </footer>
-    <section class="modal modal-booking modal-show">
-      <form class="booking-form" action="https://echo.htmlacademy.ru" method="post">
-        <label for="check-in">Дата заезда:</label>
-        <input type="date" name="check-in" value="2017-04-24">
-        <label for="check-out">Дата выезда:</label>
-        <input type="date" name="check-out" value="2017-07-24">
-        <label for="adults">Взрослые:</label>
-        <button class="number-btn" type="button" name="down-btn">-</button>
-        <input type="number" name="adults" value="2">
-        <button class="number-btn" type="button" name="up-btn">+</button>
-        <label for="children">Дети:</label>
-        <button class="number-btn" type="button" name="down-btn">-</button>
-        <input type="number" name="children" value="0">
-        <button class="number-btn" type="button" name="up-btn">+</button>
-        <button class="booking-submit-btn" type="button" name="booking-submit">Найти</button>
-      </form>
-    </section>
   </body>
 </html>
