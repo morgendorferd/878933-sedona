@@ -517,8 +517,17 @@ body {
   width: 400px;
 }
 
-.filter-title {
+.checkbox-title {
   margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.price-title {
+  margin-bottom: 10px;
   color: #ffffff;
   font-size: 16px;
   font-weight: 700;
@@ -594,4 +603,105 @@ input[type="checkbox"]:checked + .checkbox-indicator::after {
   width: 27px;
   height: 23px;
   background: url("../img/svg/checkbox-on.svg") no-repeat 0 0;
+}
+
+.price {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.price-controls {
+  position: relative;
+  width: 315px;
+  height: 32px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  font-size: 0;
+  margin-bottom: 19px;
+}
+
+.price-controls::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 22px;
+  top: 50%;
+  left: 50%;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+  padding-left: 65px;
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 79%;
+}
+
+.filter-submit-btn {
+  width: 136px;
+  border: 2px solid #ffffff;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: transparent;
+  left: 50%;
+  transform: translateX(50%);
 }
