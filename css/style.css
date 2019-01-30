@@ -319,6 +319,7 @@ body {
 }
 
 .modal-booking {
+  display: none;
   box-sizing: border-box;
   width: 568px;
   min-height: 395px;
@@ -331,6 +332,10 @@ body {
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
+}
+
+.modal-show {
+  display: block;
 }
 
 .booking-form {
