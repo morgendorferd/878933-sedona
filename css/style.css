@@ -549,7 +549,7 @@ body {
   align-items: center;
 }
 
-.social-item {
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,12 +558,12 @@ body {
   background-color: #81b3d2;
 }
 
-.social-item:hover,
-.social-item:focus {
+.social-link:hover,
+.social-link:focus {
   background-color: #669ec0;
 }
 
-.social-item:active .social-icon {
+.social-link:active .social-icon {
   opacity: 0.3;
 }
 
@@ -606,7 +606,7 @@ body {
   width: 100%;
   min-height: 217px;
   padding: 27px 70px;
-  background: #5f666c url("../img/content-img/filter_background.jpg") 0% 45%;
+  background: #5f666c url("../img/content-img/filter_background.jpg") 0% 55%;
 }
 
 .filter fieldset {
@@ -1069,20 +1069,21 @@ input[type="checkbox"]:checked + .checkbox-indicator::after {
 .hotels-rating {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  height: inherit;
   margin-right: -2px;
 }
 
-.stars-list {
-  display: flex;
-  justify-content: flex-end;
-  list-style: none;
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
+.rating-four {
+  background: url("../img/content-img/stars_first.png") no-repeat 93% 0%;
 }
 
-.stars-item:not(:last-of-type) {
-  margin-right: 6px;
+.rating-three {
+  background: url("../img/content-img/stars-second.png") no-repeat 93% 0%;
+}
+
+.rating-two {
+  background: url("../img/content-img/stars-third.png") no-repeat 95% 0%;
 }
 
 .rating-value {
